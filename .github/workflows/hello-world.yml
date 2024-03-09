@@ -3,6 +3,10 @@ on:
 
   push: {branches: ["master","main"]} 
 
+  provision_status: 
+    required: true
+    type: string
+
   workflow_dispatch:
 jobs:
   say-hello:
