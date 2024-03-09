@@ -9,7 +9,7 @@ on:
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-    array-list:
+    matrix:
       nodejs-version: [20.x]
     steps:
       -
@@ -20,19 +20,19 @@ jobs:
         name: Print Variables
         run: |
           echo "My github repository name is ${{ github.repository }}"
-          echo "My Node.JS version is ${{ array-list.nodejs-version }}"
+          echo "My Node.JS version is ${{ matrix.nodejs-version }}"
           
       -
         name: Checkout repository
         uses: actions/checkout@v4
 
       -
-        name: Setup Node.js ${{ array-list.nodejs-version }}
+        name: Setup Node.js ${{ matrix.nodejs-version }}
         uses: actions/setup-node@v4
         with:
           cache: 'npm'
           cache-dependency-path: '.github/workflows/node.js/package-lock.json'
-          node-version: ${{ array-list.nodejs-version }}
+          node-version: ${{ matrix.nodejs-version }}
 
       # Initializes CodeQL tools for scanning.
       -
