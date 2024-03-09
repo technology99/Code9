@@ -4,5 +4,3 @@ jobs:
      steps:
        - name: hello-world-action
          uses: actions/setup-node@v4
-         with:
-           provision_status: "Success"
