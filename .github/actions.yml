@@ -1,0 +1,19 @@
+# Specify location of manifest files for each package manager
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    # Files stored in "/app" directory
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "02:00"
+      timezone: "America/Los_Angeles"
+
+  - package-ecosystem: "github-actions"
+    # Workflow files stored in the default location of './github/workflows'.
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "04:00"
+      timezone: "America/Los_Angeles"
