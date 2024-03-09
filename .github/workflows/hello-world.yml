@@ -18,6 +18,32 @@ jobs:
           echo "Step 1..."
           echo "Step 2..."
           echo "Step 3..."
+          
+      - 
+        name: Checkout repository
+        uses: actions/checkout@v3
+
+      - 
+        name: Setup Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: 16
+
+      # Initializes CodeQL tools for scanning.
+      - 
+        name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: javascript
+
+      - 
+        name: Install
+        run: npm ci --quiet --ignore-scripts
+
+      - 
+        name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
 
       -
         name: Say Goodbye
