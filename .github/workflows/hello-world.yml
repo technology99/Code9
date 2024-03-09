@@ -30,7 +30,8 @@ jobs:
       -
         name: Use local hello-world-action
         uses: ./.github/actions/hello-world-action
-
+        with:
+          provision_status: "Success"
       -
         name: Say Goodbye
         run: echo "Goodbye!"
