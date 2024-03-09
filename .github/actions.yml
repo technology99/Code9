@@ -3,7 +3,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    # Files stored in "/app" directory
+    # Files stored in "/npm" directory
     schedule:
       interval: "weekly"
       day: "monday"

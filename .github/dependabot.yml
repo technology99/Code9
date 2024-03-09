@@ -13,7 +13,7 @@ updates:
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     vendor: true
-    directory: "/"
+    directory: "/npm"
     schedule:
       # Check for updates to GitHub Actions every week
       interval: "weekly"
