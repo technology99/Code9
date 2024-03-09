@@ -1,0 +1,8 @@
+name: "Dispatch"
+
+on:
+  workflow_dispatch:
+    inputs: 
+      environment:
+        type: string
+        description: Environment

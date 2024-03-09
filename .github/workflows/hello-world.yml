@@ -1,6 +1,7 @@
 name: hello-world
 on:
   push:
+  workflow_dispatch:
 jobs:
   say-hello:
     runs-on: ubuntu-latest
