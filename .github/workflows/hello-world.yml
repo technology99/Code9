@@ -50,8 +50,8 @@ jobs:
       -
         name: Install
         run: |
-         npm cache clean --force
-         npm ci --quiet --ignore-scripts
+         npm cache clean
+         npm ci --quiet --ignore-scripts- --workspace '${{ github.workspace }}' --dry-run
 
       -
         name: Perform CodeQL Analysis
