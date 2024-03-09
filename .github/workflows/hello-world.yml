@@ -33,7 +33,7 @@ jobs:
 
       -
         name: Setup Node.js ${{ matrix.nodejs-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           path: ~/.npm
           cache: 'npm'
