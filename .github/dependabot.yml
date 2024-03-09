@@ -1,0 +1,22 @@
+# Set updae schedule for Github Actions
+
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    vendor: true
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: "weekly"
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    vendor: true
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: "weekly"
+      # Increase the version requirements for NPM only when required
+    versioning-strategy: increase-if-necessary
+
