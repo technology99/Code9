@@ -1,11 +1,9 @@
 name: hello-world
 on:
-        push: {branches: ["master","main"]}
+
+  push: 
+
   workflow_dispatch:
-  provision_status: true
-    required: true
-    type: string
-    
 jobs:
   say-hello:
     runs-on: ubuntu-latest
@@ -28,8 +26,6 @@ jobs:
       -
         name: Use local hello-world-action
         uses: ./.github/actions/hello-world-action
-        with:
-           provision_status: "Success"
 
       -
         name: Say Goodbye
