@@ -8,7 +8,9 @@ on:
   workflow_dispatch:
 jobs:
   say-hello:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    array-list:
+      nodejs-version: [20.x]
     steps:
       -
         name: Say Hello
@@ -17,19 +19,20 @@ jobs:
       -
         name: Print Variables
         run: |
-          echo "My github repository name is ${{github.repository}}"
+          echo "My github repository name is ${{ github.repository }}"
+          echo "My Node.JS version is ${{ array-list.nodejs-version }}"
           
       -
         name: Checkout repository
         uses: actions/checkout@v4
 
       -
-        name: Setup Node.js 20
+        name: Setup Node.js ${{ array-list.nodejs-version }}
         uses: actions/setup-node@v4
         with:
           cache: 'npm'
           cache-dependency-path: '.github/workflows/node.js/package-lock.json'
-          node-version: 20
+          node-version: ${{ array-list.nodejs-version }}
 
       # Initializes CodeQL tools for scanning.
       -
