@@ -13,11 +13,9 @@ jobs:
         run: echo "Hello world!"
 
       -
-        name: Do stuff
+        name: Print Variables
         run: |
-          echo "Step 1..."
-          echo "Step 2..."
-          echo "Step 3..."
+          echo "My github repository name is ${{github.repository}}"
           
       -
         name: Checkout repository
@@ -28,7 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: 'npm'
-          cache-dependency-path: './.github/workflows/node.js/package-lock.json'
+          cache-dependency-path: '.github/workflows/node.js/package-lock.json'
           node-version: 20
 
       # Initializes CodeQL tools for scanning.
