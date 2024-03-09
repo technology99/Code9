@@ -33,7 +33,7 @@ jobs:
 
       -
         name: Setup Node.js ${{ matrix.nodejs-version }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@latest
         with:
           path: ~/.npm
           cache: 'npm'
@@ -49,7 +49,9 @@ jobs:
 
       -
         name: Install
-        run: npm ci --quiet --ignore-scripts
+        run: |
+
+         npm ci --quiet --ignore-scripts
 
       -
         name: Perform CodeQL Analysis
