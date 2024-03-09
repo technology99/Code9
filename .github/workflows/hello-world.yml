@@ -33,7 +33,7 @@ jobs:
 
       -
         name: Setup Node.js ${{ matrix.nodejs-version }}
-        uses: actions/setup-node@latest
+        uses: actions/setup-node@v4
         with:
           path: ~/.npm
           cache: 'npm'
@@ -50,7 +50,7 @@ jobs:
       -
         name: Install
         run: |
-
+         npm cache clean --force
          npm ci --quiet --ignore-scripts
 
       -
