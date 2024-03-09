@@ -24,6 +24,7 @@ jobs:
         name: Print Variables
         run: |
           echo "My github repository name is ${{ github.repository }}"
+          echo "My workspace is ${{ github.workspace }}"
           echo "My Node.JS version is ${{ matrix.nodejs-version }}"
           
       -
@@ -35,7 +36,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: 'npm'
-          cache-dependency-path: '.github/workflows/node.js/package-lock.json'
+          cache-dependency-path: ${{github.workspace}}/npm/package-lock.json
           node-version: ${{ matrix.nodejs-version }}
 
       # Initializes CodeQL tools for scanning.
