@@ -20,13 +20,6 @@ jobs:
           echo "Step 3..."
 
       -
-        name: Check out repository
-        uses: actions/checkout@v4
-
-      -
-        name: Use local hello-world-action
-        uses: ./.github/actions/hello-world-action
-      -
         name: Say Goodbye
         run: echo "Goodbye!"
 

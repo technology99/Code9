@@ -1,6 +1,0 @@
-#
-jobs:
-  say_hello:
-     steps:
-       - name: hello-world-action
-         uses: actions/setup-node@v4
