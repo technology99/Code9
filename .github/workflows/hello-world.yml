@@ -27,18 +27,17 @@ jobs:
           echo "My workspace is ${{ github.workspace }}"
           echo "My Node.JS version is ${{ matrix.nodejs-version }}"
           
-          #      -
-          #name: Checkout repository
-          #uses: actions/checkout@v4
+      -
+        name: Checkout repository
+        uses: actions/checkout@v4
 
       -
-        name: Setup Node.js ${{ matrix.nodejs-version }}
-        uses: actions/checkout@v4
+        name: Setup Node.js '${{ matrix.nodejs-version }}'
         uses: actions/setup-node@v4
         with:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
-          node-version: ${{ matrix.nodejs-version }}
+          node-version: '${{ matrix.nodejs-version }}'
 
       # Initializes CodeQL tools for scanning.
       -
