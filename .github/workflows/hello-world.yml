@@ -33,10 +33,11 @@ jobs:
 
       -
         name: Setup Node.js ${{ matrix.nodejs-version }}
+        uses: actions/checkout@v4
         uses: actions/setup-node@v4
         with:
           cache: 'npm'
-          #cache-dependency-path: '~/runner/.npm/package-lock.json'
+          cache-dependency-path: '**/package-lock.json'
           node-version: ${{ matrix.nodejs-version }}
 
       # Initializes CodeQL tools for scanning.
