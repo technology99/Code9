@@ -1,7 +1,7 @@
 # Code9
 
 - SYMPTOM    : Interview request for 'Delta Dental'
-- DATE       : Friday March 8, 2024 @ 15:00 EST
+- DATE       : Friday March 8, 2024 @ 15:00 EST @ 12:00 PST
 - JOB ID     : GitHub Advanced Security & Enterprise Cloud Engineer
 - INTERVIWER : Arnold Mutayoba @ Delta Dental 
 - TOOL       : <a href="https://github.com" target="_blank" rel="noreferrer noopener"> Repository Tool link </a>
