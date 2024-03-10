@@ -27,9 +27,9 @@ jobs:
           echo "My workspace is ${{ github.workspace }}"
           echo "My Node.JS version is ${{ matrix.nodejs-version }}"
           
-      -
-        name: Checkout repository
-        uses: actions/checkout@v4
+          #      -
+          #name: Checkout repository
+          #uses: actions/checkout@v4
 
       -
         name: Setup Node.js ${{ matrix.nodejs-version }}
