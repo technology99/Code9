@@ -49,6 +49,8 @@ jobs:
       -
         name: Install
         run: |
+         npm init -y
+         npm i --lockfile-version 3 --package-lock-only
          npm ci --quiet --ignore-scripts
 
       -
