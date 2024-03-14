@@ -11,8 +11,9 @@
       - github
       - dependabot
       - codeQL
+      - javascript
 - CODE STATUS: Completed in full in 5 hours. 
-- OUTCOME: Job interview is still ongoing.
+- OUTCOME: Notified on 03/14/2024 that the Job was not offered.
 
 ## Github Action Pipeline exectution by CLI.
 ```
